@@ -43,11 +43,11 @@
   **modprove -v netlink_diag** // -v es el verbose que nos muestra que ejecuta por debajo al utilizar el comando (Ejecuta por debajo insmod)  
   **modprove -vr netlink_diag** // -vr descargariamos un modulo (Ejecuta por debajo insmod y rmmod)  
   
-  ###### Gestion de dispositivos USB  (Bus Universal en Serie)
+  ###### Gestion de dispositivos USB  (Bus Universal en Serie)  
   
-  **lsusb** // Nos muestra los diferentes buses que tienen la placa madre y los diferentes dispositivos en ese bus
-  **lsusb -v** // Version mas depurada de la informacion
-  **lsusb -t** // Muestra la vista en forma de arbol
+  **lsusb** // Nos muestra los diferentes buses que tienen la placa madre y los diferentes dispositivos en ese bus  
+  **lsusb -v** // Version mas depurada de la informacion  
+  **lsusb -t** // Muestra la vista en forma de arbol  
   
   ###### Arranque del sistema
   
