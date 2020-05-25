@@ -17,6 +17,8 @@ cat /proc/dma // Direcciones de acceso directo a memoria
 
   Hay dos tipos de dispositivos en el sistema,  “cold plug” y  “hot plug”, la diferencia es la forma en la que pueden ser conectados y desconectados en el sistema, “cold plug”, cuando el dipositivo esta apagado, por ejemplo CPU, memoria RAM, disco duro, en cambio “hot plug”, se pueden desconectar y conectar con el sistema operativo en funcionamiento.  
 
+![](https://github.com/leandrocosmetomassini/Linux/blob/master/Capetas/101/Capturas/1.png?raw=true)
+
 lspci // Listado de los dispositivos PCI del sistema  
 man lspci // Manual del comando lspci  
 lspci -t // Lista en arbol de buses PCI  
@@ -40,15 +42,15 @@ setpci // Permite configurar el dispositivo, (Es necesario conocer a bajo nivel 
   modprove -v netlink_diag // -v es el verbose que nos muestra que ejecuta por debajo al utilizar el comando (Ejecuta por debajo insmod)  
   modprove -vr netlink_diag // -vr descargariamos un modulo (Ejecuta por debajo insmod y rmmod)  
   
-  ####### Gestion de dispositivos USB  (Bus Universal en Serie)
+  ###### Gestion de dispositivos USB  (Bus Universal en Serie)
   
   lsusb // Nos muestra los diferentes buses que tienen la placa madre y los diferentes dispositivos en ese bus
   lsusb -v // Version mas depurada de la informacion
   lsusb -t // Muestra la vista en forma de arbol
   
-  ####### Arranque del sistema
+  ###### Arranque del sistema
   
-  
+  ![](https://github.com/leandrocosmetomassini/Linux/blob/master/Capetas/101/Capturas/2.png?raw=true)
   
    
   
