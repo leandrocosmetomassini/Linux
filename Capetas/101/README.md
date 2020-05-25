@@ -30,12 +30,13 @@
   En un sistema Linux los modulos del Kernel representan lo que seria los controladores o drivers del hardware que tenemos en el sistema. En /lib/modules Linux almacena los drivers de los diversos elementos Hardware que tenemos en el sistema.    
   
   **lsmod** // Muestra los modulos cargados actualmente en la memoria RAM  
-  **cd** /lib/modules/4.19.0-8-amd64/ // Serie de ficheros que dan informacion de los modulos  
+  **cd /lib/modules/4.19.0-8-amd64/** // Serie de ficheros que dan informacion de los modulos  
   **netlink_diag.ko** // Ficheros .ko son drivers en Linux, por estandar se guardan en /lib/modules  
   **modinfo nombreModulo** // Ofrece informacion a nivel detallado del modulo, por ejemplo donde esta ubicado ese driver  
   **insmod** // Para cargar un modulo en el sistema con el fichero.ko dentro de /lib/modules/ 
   **insmod /lib/modules/4.4.0-64-generic/kernel/net/netlink/netlink_diag.ko** // Carga ese driver en la memoria RAM  
-  **lsmod |grep netlink** // Filtrar por netlink para ver que ya esta cargado (Se podra ver que ocupa un espacio en memoria RAM)   **rmmod netlink_diag** // Se descargaria el modulo netlink_diag, comando original pensado para esto
+  **lsmod |grep netlink** // Filtrar por netlink para ver que ya esta cargado (Se podra ver que ocupa un espacio en memoria RAM)  
+  **rmmod netlink_diag** // Se descargaria el modulo netlink_diag, comando original pensado para esto
   
   **modprobe** // La ventaja que tiene sobre insmod y rmmod, es que realiza una gestion inteligente a la hora de anadir o eliminar modulos en el sistema, si con insmod inteamos cargar un modulo que tiene una dependencia sobre otro modulo nos daria un error, en cambio este detecta que tiene una dependencia y la carga automaticamente para poder cargar ese modulo, al igual para descargar, detectara las depencias.  
   
