@@ -52,6 +52,7 @@ setpci // Permite configurar el dispositivo, (Es necesario conocer a bajo nivel 
   
   ![](https://github.com/leandrocosmetomassini/Linux/blob/master/Capetas/101/Capturas/2.png?raw=true)
   
+  
    
   
   
