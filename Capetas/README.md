@@ -31,7 +31,29 @@ setpci // Permite configurar el dispositivo, (Es necesario conocer a bajo nivel 
   cd /lib/modules/4.19.0-8-amd64/ // Serie de ficheros que dan informacion de los modulos  
   netlink_diag.ko // Ficheros .ko son drivers en Linux, por estandar se guardan en /lib/modules  
   modinfo nombreModulo // Ofrece informacion a nivel detallado del modulo, por ejemplo donde esta ubicado ese driver  
-  insmod // Para cargar un modulo en el sistema con el fichero.ko dentro de /lib/modules/  
+  insmod // Para cargar un modulo en el sistema con el fichero.ko dentro de /lib/modules/ 
+  insmod /lib/modules/4.4.0-64-generic/kernel/net/netlink/netlink_diag.ko // Carga ese driver en la memoria RAM  
+  lsmod |grep netlink // Filtrar por netlink para ver que ya esta cargado (Se podra ver que ocupa un espacio en memoria RAM)   rmmod netlink_diag // Se descargaria el modulo netlink_diag, comando original pensado para esto
+  
+  modprobe // La ventaja que tiene sobre insmod y rmmod, es que realiza una gestion inteligente a la hora de anadir o eliminar modulos en el sistema, si con insmod inteamos cargar un modulo que tiene una dependencia sobre otro modulo nos daria un error, en cambio este detecta que tiene una dependencia y la carga automaticamente para poder cargar ese modulo, al igual para descargar, detectara las depencias.  
+  
+  modprove -v netlink_diag // -v es el verbose que nos muestra que ejecuta por debajo al utilizar el comando (Ejecuta por debajo insmod)  
+  modprove -vr netlink_diag // -vr descargariamos un modulo (Ejecuta por debajo insmod y rmmod)  
+  
+  ####### Gestion de dispositivos USB  (Bus Universal en Serie)
+  
+  lsusb // Nos muestra los diferentes buses que tienen la placa madre y los diferentes dispositivos en ese bus
+  lsusb -v // Version mas depurada de la informacion
+  lsusb -t // Muestra la vista en forma de arbol
+  
+  ####### Arranque del sistema
+  
+  
+  
+   
+  
+  
+  
   
   
 
