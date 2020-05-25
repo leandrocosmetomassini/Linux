@@ -15,7 +15,7 @@
 
 ###### Dispositivos PCI
 
-  Hay dos tipos de dispositivos en el sistema,  “cold plug” y  “hot plug”, la diferencia es la forma en la que pueden ser conectados y desconectados en el sistema, “cold plug”, cuando el dipositivo esta apagado, por ejemplo CPU, memoria RAM, disco duro, en cambio “hot plug”, se pueden desconectar y conectar con el sistema operativo en funcionamiento.  
+  Hay dos tipos de dispositivos en el sistema,  **“cold plug”** y  **“hot plug”**, la diferencia es la forma en la que pueden ser conectados y desconectados en el sistema, “cold plug”, cuando el dipositivo esta apagado, por ejemplo CPU, memoria RAM, disco duro, en cambio “hot plug”, se pueden desconectar y conectar con el sistema operativo en funcionamiento.  
 
 ![](https://github.com/leandrocosmetomassini/Linux/blob/master/Capetas/101/Capturas/1.png?raw=true)
 
