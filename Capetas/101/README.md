@@ -25,6 +25,7 @@
 **lspci -nn** // Nombre del fabricante y dispositivo con codigo numero del dispositivo PCI  
 **setpci** // Permite configurar el dispositivo, (Es necesario conocer a bajo nivel el hardware que estamos consultando)  
 
+ 
 ###### Modulos del Kernel  
 
   En un sistema Linux los modulos del Kernel representan lo que seria los controladores o drivers del hardware que tenemos en el sistema. En /lib/modules Linux almacena los drivers de los diversos elementos Hardware que tenemos en el sistema.    
@@ -64,6 +65,10 @@
   **shutdown -r +30 Voy reiniciar la maquina en 30 minutos** // Ejemplo de reiniciar el servidor  
   **shutdown -c** // Se cancela el apagado    
   
+![](https://github.com/leandrocosmetomassini/Linux/blob/master/Capetas/101/Capturas/5.png)  
+![](https://github.com/leandrocosmetomassini/Linux/blob/master/Capetas/101/Capturas/6.png)  
+![](https://github.com/leandrocosmetomassini/Linux/blob/master/Capetas/101/Capturas/7.png)  
+![](https://github.com/leandrocosmetomassini/Linux/blob/master/Capetas/101/Capturas/8.png) 
    
   
   
