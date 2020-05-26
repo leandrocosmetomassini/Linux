@@ -53,6 +53,16 @@
   
   ![](https://github.com/leandrocosmetomassini/Linux/blob/master/Capetas/101/Capturas/2.png?raw=true)
   
+  **runlevel** // Nos muestra dos valores: nivel de estado anterior y nivel de estado actual  
+  **init 3** // Nos cambia al nivel de ejecucion 3  
+  **telinit 3** // Nos cambia al nivel de ejecucion 3  
+  **cd /etc/systemd/** // Directorios de configuracion systemd  
+  **cd /etc/systemd/system** // Funcionalidades de systemd  
+  
+  **wall** // Muestra un mensaje a la consola de todos los usuarios  
+  **shutdown opciones tiempo mensaje**// Apagar servidor  
+  **shutdown -r +30 Voy reiniciar la maquina en 30 minutos** // Ejemplo de reiniciar el servidor  
+  **shutdown -c** // Se cancela el apagado    
   
    
   
