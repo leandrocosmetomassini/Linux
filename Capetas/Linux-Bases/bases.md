@@ -82,4 +82,20 @@ Esta forma de componer la estructura de directorios tiene una serie de ventajas 
 * Seguridad: Puedes asegurar un sector de tu sistema de datos críticos montándolo en solo lectura. La ventaja de agregar esta característica a la partición y no a los ficheros es por cuestiones de redundancia.    
 * Backup: Las herramientas de copias de seguridad trabajan mejor en sistemas pequeños y aislados de tareas de escritura.    
 
+### Que es una shell  
+
+El shell es el entorno que hace de intermediario entre el usuario y los recursos del ordenador, como si fuera un entorno de programación en tiempo real para ejecutar tareas. La shell aparece cuando nos logueamos en el sistema en modo consola, o bien cuando en el entorno gráfico abrimos una terminal.  
+  
+La shell se compone de un prompt, que es un texto inicial que normalmente nos ofrece información útil como el usuario que está utilizando la shell, el hostname de la máquina o incluso el directorio sobre el que estamos posicionados en cada momento, y el cursor que recibe las ordenes de teclado.
+Diferentes shells en Linux  
+  
+Existen multitud de shells diferentes para poder interactuar con nuestro sistema operativo, aunque la más conocida y habitual en la mayoría de distribuciones es la shell bash. Cada shell cuenta con sus propias características de uso, contando con atajos de teclado, visualización en vivo de ficheros, y atajos durante la navegación entre directorios. A continuación vamos a citar las shells mas famosas y una pequeña descripción de su procedencia:  
+
+***bash*** (Bourne Again Shell): Se basa en los principios de shell Bourne de Unix pero se ha extendido en varios aspectos. Es la shell por defecto para la mayoria de las cuentas de usuario y es la que se tratará con más detalle en este curso.  
+***bsh:*** El shell Bourne es la shell sobre la que está basada bash. Se conoce con el nombre de BSH. Su uso no es frecuente en Linux aunque el comando bsh suele ser un enlace simbólico a bash.  
+***tcsh*** Este shell tcsh se basa en el anterior shell C (csh). Es una shell bastante popular en algunos círculos pero no hay distribuciones de Linux que lo traigan por defecto. Aunque es similar a bash en muchos aspectos difiere en algunos aspectos de operación. Por ejemplo, no se asignan variables de entorno de la misma manera que en bash.  
+***csh:*** El original csh shell C no es muy utilizado en Linux pero si un usuario está familiarizado con csh, tcsh es un buen sustituto.  
+***ksh:*** El shell Korn (ksh) fue diseñado cogiendo las mejores opciones de la shell Bourne y el C shell. Tiene un pequeño pero dedicado numero de seguidores.
+***zsh:*** El shell zsh Z (zsh) es la evolución de la shell Korn e incorpora características de esta última además de agregar otras.  
+ 
 
