@@ -75,11 +75,11 @@ Como se puede apreciar en la imagen, cada partición del disco duro está asocia
 
 Esta forma de componer la estructura de directorios tiene una serie de ventajas en cuanto a la integridad y seguridad del sistema operativo que son:
   
-    Soporte multi-operativo: Permite alojar varios sistemas operativos.  
-    Elección del sistema de ficheros: Cada sistema de ficheros ofrece diferentes características eligiéndolas según las necesidades que se tengan para esa partición.  
-    Control y administración del espacio en disco: Se puede controlar el acceso de los usuarios a las diferentes particiones.  
-    Protección de errores en el disco: Al estar dividida la partición un error físico del disco probablemente afectará a una parte del sistema operativo, dejando la posibilidad de que se pueda seguir trabajando con él e intentar recuperar el sector dañado.  
-    Seguridad: Puedes asegurar un sector de tu sistema de datos críticos montándolo en solo lectura. La ventaja de agregar esta característica a la partición y no a los ficheros es por cuestiones de redundancia.  
-    Backup: Las herramientas de copias de seguridad trabajan mejor en sistemas pequeños y aislados de tareas de escritura.  
+    * Soporte multi-operativo: Permite alojar varios sistemas operativos.    
+    * Elección del sistema de ficheros: Cada sistema de ficheros ofrece diferentes características eligiéndolas según las necesidades que se tengan para esa partición.    
+    * Control y administración del espacio en disco: Se puede controlar el acceso de los usuarios a las diferentes particiones.    
+    * Protección de errores en el disco: Al estar dividida la partición un error físico del disco probablemente afectará a una parte del sistema operativo, dejando la posibilidad de que se pueda seguir trabajando con él e intentar recuperar el sector dañado.    
+    * Seguridad: Puedes asegurar un sector de tu sistema de datos críticos montándolo en solo lectura. La ventaja de agregar esta característica a la partición y no a los ficheros es por cuestiones de redundancia.    
+    * Backup: Las herramientas de copias de seguridad trabajan mejor en sistemas pequeños y aislados de tareas de escritura.    
 
 
