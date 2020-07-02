@@ -87,7 +87,8 @@ Esta forma de componer la estructura de directorios tiene una serie de ventajas 
 El shell es el entorno que hace de intermediario entre el usuario y los recursos del ordenador, como si fuera un entorno de programación en tiempo real para ejecutar tareas. La shell aparece cuando nos logueamos en el sistema en modo consola, o bien cuando en el entorno gráfico abrimos una terminal.  
   
 La shell se compone de un prompt, que es un texto inicial que normalmente nos ofrece información útil como el usuario que está utilizando la shell, el hostname de la máquina o incluso el directorio sobre el que estamos posicionados en cada momento, y el cursor que recibe las ordenes de teclado.
-Diferentes shells en Linux  
+  
+### Diferentes shells en Linux  
   
 Existen multitud de shells diferentes para poder interactuar con nuestro sistema operativo, aunque la más conocida y habitual en la mayoría de distribuciones es la shell bash. Cada shell cuenta con sus propias características de uso, contando con atajos de teclado, visualización en vivo de ficheros, y atajos durante la navegación entre directorios. A continuación vamos a citar las shells mas famosas y una pequeña descripción de su procedencia:  
 
