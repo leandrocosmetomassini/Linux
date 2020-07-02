@@ -3,11 +3,11 @@ GNU/Linux permite muchas formas de poder acceder al sistema operativo, a través
 
 En este curso vamos a explicar, gracias a nuestra máquina virtual, el método de acceso local (interfaz gráfica y consola virtual) y el método de acceso en remoto a través del servicio ssh.  
 
-    ***Método local:***  
-        Interfaz gráfica: Esta interfaz es la que nos aparece por defecto en el arranque del sistema operativo Ubuntu. Nos permite ejecutar una terminal en modo gráfico
-        Terminal virtual: Este tipo de terminales se pueden visualizar en el sistema pulsando la combinación de teclas Alt + Ctrl + F1-F6. Linux crea por defecto 6 terminales virtuales para poder usar y dos displays gráficos, ubicados en Ctrl + Alt + F7-F8.  
-    ***Método remoto:***  
-        SSH: Ssh es el acrónimo de Secure SHell y permite el acceso a una terminal de nuestro sistema a través de la red con la característica de aportar seguridad gracias a la encriptación de sus comunicaciones. Es un servicio de estructura cliente-servidor, donde el servidor abre el puerto 22 para admitir conexiones y el cliente utiliza la aplicación para conectarse a dicho puerto.  
+***Método local:***  
+Interfaz gráfica: Esta interfaz es la que nos aparece por defecto en el arranque del sistema operativo Ubuntu. Nos permite ejecutar una terminal en modo gráfico
+Terminal virtual: Este tipo de terminales se pueden visualizar en el sistema pulsando la combinación de teclas Alt + Ctrl + F1-F6. Linux crea por defecto 6 terminales virtuales para poder usar y dos displays gráficos, ubicados en Ctrl + Alt + F7-F8.  
+***Método remoto:***  
+SSH: Ssh es el acrónimo de Secure SHell y permite el acceso a una terminal de nuestro sistema a través de la red con la característica de aportar seguridad gracias a la encriptación de sus comunicaciones. Es un servicio de estructura cliente-servidor, donde el servidor abre el puerto 22 para admitir conexiones y el cliente utiliza la aplicación para conectarse a dicho puerto.  
 
 * Para instalar ssh: sudo apt-get install openssh-server  
 * Para conectarse medianse ssh: ssh osboxes@localhost // Me conectaria a si mismo  
@@ -75,11 +75,11 @@ Como se puede apreciar en la imagen, cada partición del disco duro está asocia
 
 Esta forma de componer la estructura de directorios tiene una serie de ventajas en cuanto a la integridad y seguridad del sistema operativo que son:
   
-    * Soporte multi-operativo: Permite alojar varios sistemas operativos.    
-    * Elección del sistema de ficheros: Cada sistema de ficheros ofrece diferentes características eligiéndolas según las necesidades que se tengan para esa partición.    
-    * Control y administración del espacio en disco: Se puede controlar el acceso de los usuarios a las diferentes particiones.    
-    * Protección de errores en el disco: Al estar dividida la partición un error físico del disco probablemente afectará a una parte del sistema operativo, dejando la posibilidad de que se pueda seguir trabajando con él e intentar recuperar el sector dañado.    
-    * Seguridad: Puedes asegurar un sector de tu sistema de datos críticos montándolo en solo lectura. La ventaja de agregar esta característica a la partición y no a los ficheros es por cuestiones de redundancia.    
-    * Backup: Las herramientas de copias de seguridad trabajan mejor en sistemas pequeños y aislados de tareas de escritura.    
+* Soporte multi-operativo: Permite alojar varios sistemas operativos.    
+* Elección del sistema de ficheros: Cada sistema de ficheros ofrece diferentes características eligiéndolas según las necesidades que se tengan para esa partición.    
+* Control y administración del espacio en disco: Se puede controlar el acceso de los usuarios a las diferentes particiones.    
+* Protección de errores en el disco: Al estar dividida la partición un error físico del disco probablemente afectará a una parte del sistema operativo, dejando la posibilidad de que se pueda seguir trabajando con él e intentar recuperar el sector dañado.    
+* Seguridad: Puedes asegurar un sector de tu sistema de datos críticos montándolo en solo lectura. La ventaja de agregar esta característica a la partición y no a los ficheros es por cuestiones de redundancia.    
+* Backup: Las herramientas de copias de seguridad trabajan mejor en sistemas pequeños y aislados de tareas de escritura.    
 
 
