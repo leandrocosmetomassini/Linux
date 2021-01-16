@@ -4,7 +4,7 @@
 * lsblk // Ver unidades de discos
 * ifconfig // Dispositivos de red
 * lspci // Ver dispositivos PCI
-* 
+* man hier // Manual y Arquitectura: Sus descripciones
 * 
 * 
 * 
