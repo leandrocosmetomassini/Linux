@@ -10,4 +10,4 @@
 * []()
 
 # Debian / CentOS
-* [Debian / CentOS](/Centos-Debian/README.md)
+* [Debian / CentOS](https://github.com/leandrocosmetomassini/Linux/tree/master/Capetas/Centos-Debian)
