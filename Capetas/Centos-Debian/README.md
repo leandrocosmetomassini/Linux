@@ -152,16 +152,95 @@ Es mas poderoso que un buscador gráfico, nos permite buscar por fechas, modific
 
 
 ## Wget y curl
+Sirven para descargar archivos, o obtener información desde un sitio web. Por defecto no vienen instalados. Sin necesidad de tener un navegador web
+ 
+***wget url*** // Descarga el archivo de la URL  
+***wget -c url*** // Continua desde donde quedo la descarga si fue cancelada  
+***curl -O url*** // Descarga el archivo desde la URL  
+***wget -c -r -A.iso url*** // Descarga todos los archivos .iso del la url, si se ***-c*** cancela continua, y descargar de forma recursiva ***-r*** en todos los directorios  
+***wget -c -b -r -A.iso url*** // Descarga todos los archivos .iso del la url, si se ***-c*** cancela continua, y descargar de forma recursiva ***-r*** en todos los directorios, con ***-b*** se ejecutara en background  
+***tail wget-log*** // Muestra como se esta descargando en background  
+***curl www.google.com*** // Muestra el contenido de la página de Google 
 
+## Comando history  
+Guarda historial de hasta 1000 comandos que halla utilizado, no es recomendable tener tanto historial, lo mejor es hasta máximo 1000, si se puede menos mucho mejor. El problema es que no guarda las fechas  de cuando se ejecuto el comando, y eso para una auditoria es importante.
+
+***nano .bashrc*** // Muestra el tamaño de mi history  en ***HISTSIZE=1000***  
+***history*** // Muestra el historial de comandos  
+***history -c*** //  Hace un clear, borra los comandos de history 
+***nano .bash_logout*** // Muestra los comandos que queremos que se ejecuten cuando salga de la shell  
+***echo "HISTTIMEFORMAT='%F %T : '" >> .bashrc*** // Ahora mi history va a mostrar la fecha y el tiempo que se ejecuto el comando, eso lo guarda en .bashrc  
+***!numeroComando*** // Ejecuta un comando del history  
+***ctrl+r*** // Intenta autocompletar el comando desde history  
+
+## Comando DD
+Nos permite sobreescribir un disco duro, o crear una imagen USB.
+Es un comando que nos permite escribir bloques, vaciar discos duros, o dar un formato bajo nivel, escribiendo todos los sectores, generar una doble escritura del mismo.
+
+***f disk -l*** // Lista todos los dispositivos de almacenamiento conectados  
+***sudo dd if=/dev/zero of=/dev/sdc bs=512 count=1024*** // Utilizando el archivo especial zero, escritura a bajo nivel, luego el nombre de la unidad USB a formatear, luego se indica el tamaño del bloque, (512 bytes), y por último la cantidad de veces que se escribe el bloque. De esta forma solo se destruye el primer bloque
+
+***sudo dd if=/dev/zero of=/dev/sdc bs=512*** // Utilizando el archivo especial zero, escritura a bajo nivel, luego el nombre de la unidad USB a formatear, luego se indica el tamaño del bloque, (512 bytes), y por último la cantidad de veces que se escribe el bloque. De esta forma solo se destruye todo el contenido de todos los sectores de la USB a zero.
+
+***sudo dd if=Debian.iso of=/dev/sdc*** // Crea una USB para instalar Debian, desde la imagen .iso descargada.  
+
+# Editor de textos Nano
+Es el mas fácil de utilizar, debido a que es el más parecido a utilizar un editor de texto en un entorno gráfico. Límitado a comparación de VIM.
+
+***nano*** // Crea un archivo en blanco  
+
+# Editor de texto VIM  
+Se encuentra en todas las distribuciones basadas en Unix.
+Hay tres modos, comando, inserción, y en modo línea de comandos.
+  
+***vi a*** // Abre un nuevo archivo llamado ***a***    
+***esc*** // Al presionar esc y en mayúscula ZZ cierra sin guardar    
+***i*** // Permite comenzar a insertar datos     
+***a*** // Insertar texto al final de la palabra  
+***A*** // Insertar datos al final de la línea  
+***I*** // Insertar datos al principio de la línea 
+***O*** // Insertar datos en una nueva línea 
+***:w*** // Guarda el archivo  
+***:zz*** // Guarda el archivo  
+***:!q*** // Salir sin guardar  
+***:!wq*** // Guardar y salir  
+***h*** // Izquierda    
+***j*** // Abajo 
+***k*** // Arriba   
+***l*** // Derecha
+***0*** // Primra línea del archivo
+***$*** // Última línea del archivo
+***w*** // Desplazarse entre palabras 
+***ctrl+f*** // Página hacia adelante   
+***ctl+b*** //  Página hacia atrás  
+***G*** // Última línea del archivo    
+***3G*** // Se desplaza hacia la línea 3    
+***x*** // Elimina la letra    
+***X*** // Elimina el carácter anterior   
+***r+letra*** // Reemplaza el carácter donde estoy posicionado   
+***d+w*** // Elimina una palabra   
+***D*** //  Elimina la línea desde el carácter hacia la derecha   
+***d+$*** // Elimina la línea desde el carácter hacia la derecha       
+***d+f+d*** // Borra el contenido hasta la letra ***d***     
+***u*** //  Retrocede 1 vez en el tiempo   
+***:u5*** // Retrocede 5 veces en el tiempo    
 *** *** //  
 *** *** //  
+*** *** //  
+*** *** //  
+*** *** //    
+*** *** //    
+*** *** //    
 
 
 
 
 
 *** *** //  
-*** *** //  
+
+
+
+
 *** *** //  
 *** *** //  
 *** *** //  
