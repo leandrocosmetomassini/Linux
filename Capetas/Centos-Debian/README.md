@@ -77,7 +77,7 @@ Todos ejecutan ***init 0***, pero apagan adecuadamente el sistema.
 ***reebot***
 ***init 6*** // Reinicia el sistema bruscamente
 
-******
+
 
 ## System D
 Unifica herramientas, y posee mejoras en el arranque del sistema, unifico las distribuciones en una misma herramienta.
@@ -86,7 +86,7 @@ No puede ser utilizado en otro sistema que no sea basado kernel de Linux, no es 
 
 Tiene comandos útiles para, arranque del sistema, gestión de servicios, gestión del sistema, y gestión de registros.
 
-****
+
 ## Utilizar alias
 La definición de un alias es renombrar una línea de comandos, por otra, por ejemplo  ***el alias de Diego Armando Maradona, es d10s***.
 
@@ -96,7 +96,7 @@ La definición de un alias es renombrar una línea de comandos, por otra, por ej
 
 ***nano .bashrc*** // Abre el editor nano el archivo bashrc del usuario, buscar en donde dice ***some more alias***, y escribir el alias sin ***#***, entonces no se va a perder luego de cerrar la sesión.
 
-****
+
 ## Conocer el estado del sistema
 
 ***lshw*** // obtiene información desde el sistema  ***dmidecode***// obitene información directamente desde la bios
@@ -149,6 +149,10 @@ Es mas poderoso que un buscador gráfico, nos permite buscar por fechas, modific
 ***find . -inum 4457184*** // Busca un archivo por su inodo, es bueno cuando el nombre tiene algún caracter especial.  
 ***find . -inum 4457184 -exec rm -rf {}\;*** // Busca y borra el archivo conflictivo por su inodo  
 ***find /home/soporte/ -mtime -5*** // Buscar archivos modificados hace menos de 5 días. 
+
+
+## Wget y curl
+
 *** *** //  
 *** *** //  
 
@@ -156,6 +160,11 @@ Es mas poderoso que un buscador gráfico, nos permite buscar por fechas, modific
 
 
 
+*** *** //  
+*** *** //  
+*** *** //  
+*** *** //  
+*** *** //  
 *** *** //  
 
 
