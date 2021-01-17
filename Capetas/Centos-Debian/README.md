@@ -27,14 +27,14 @@ A la hora de instalar, se recomienda hacer las particiones manualmente, y tener 
 Cuando el instalador pregunte si deseas configurar el gestor de paquetes, lo recomendable es elegir Estados Unidos, ya que  que en otros paises tardan mucho en actualizarse.
 
 Tener en cuenta con el ***administrador de las IP***, que ip esta libre para nuestro equipo. También tener en cuenta que si compartimos datos con la comunidad de Debian en un ambiente de producción, estariamos gastando ancho de banda.
-***
+
 ## Terminal y consola
 La ***terminal*** se encarga de llamar a la ***consola***, la consola, es un interprete de comandos, y al mismo tiempo es un lenguaje de programación.
 
 Un tipo de consola es la ***sh***, aunque en general también se utiliza ***bash***. La diferencia entre una consola y otra son los comandos y las variables que manejan. 
 
 La ***consola***, también llamada ***cli o command line interface***, es aquella interface por línea de comandos que me permite interactuar con el sistema, y cada consola tiene sus funciones independientes, lo mismo con las diferentas terminales. 
-***
+
 
 ## Man: Obtener ayuda e información sobre un comando SIN TENER ACCESO A INTERNET
 
@@ -56,7 +56,7 @@ Para buscar una palabra dentro del manual, se utiliza ***/palabra***, esto nos m
 ***man 5 passwd***, busca en el nivel 5, el archivo de configuración passwd.
 
 ***apropos pass***, es muy similar a lo que seria la opción ***k*** el manual.
-****
+
 ## Apagar y reinciar el sistema
 En Linux es recomendable reiniciar un servicio, y no reiniciar todo el servidor.
 
@@ -132,7 +132,7 @@ La definición de un alias es renombrar una línea de comandos, por otra, por ej
 ***pstree*** // Más detallado, procesos en arquitectura de árbol 
 ***df -h*** // Muestra el tamaño del disco duro  
 ***lsblk*** //  Muestra el tamaño del disco duro en forma de árbol
-******   
+  
 ## Comando find  
 Es mas poderoso que un buscador gráfico, nos permite buscar por fechas, modificaciones, accesos, múltiples características de un archivo, es muy complejo y completo.
 
@@ -169,8 +169,7 @@ Es mas poderoso que un buscador gráfico, nos permite buscar por fechas, modific
 
 
 
-****
-****
+
 
 
 
