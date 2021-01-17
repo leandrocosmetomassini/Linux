@@ -25,6 +25,21 @@ A la hora de instalar, se recomienda hacer las particiones manualmente, y tener 
 
 Cuando el instalador pregunte si deseas configurar el gestor de paquetes, lo recomendable es elegir Estados Unidos, ya que  que en otros paises tardan mucho en actualizarse.
 
+Tener en cuenta con el ***administrador de las IP***, que ip esta libre para nuestro equipo. También tener en cuenta que si compartimos datos con la comunidad de Debian en un ambiente de producción, estariamos gastando ancho de banda.
+
+## Terminal y consola
+La ***terminal*** se encarga de llamar a la ***consola***, la consola, es un interprete de comandos, y al mismo tiempo es un lenguaje de programación.
+
+Un tipo de consola es la ***sh***, aunque en general también se utiliza ***bash***. La diferencia entre una consola y otra son los comandos y las variables que manejan. 
+
+La ***consola***, también llamada ***cli o command line interface***, es aquella interface por línea de comandos que me permite interactuar con el sistema, y cada consola tiene sus funciones independientes, lo mismo con las diferentas terminales. 
+
+
+
+
+
+
+
 
 
 
