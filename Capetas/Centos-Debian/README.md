@@ -224,11 +224,11 @@ Hay tres modos, comando, inserción, y en modo línea de comandos.
 ***d+f+d*** // Borra el contenido hasta la letra ***d***     
 ***u*** //  Retrocede 1 vez en el tiempo   
 ***:u5*** // Retrocede 5 veces en el tiempo    
-*** *** //  
-*** *** //  
-*** *** //  
-*** *** //  
-*** *** //    
+***/palabra*** // Busca la palabra
+***?palabra*** // Busca la palabra  
+***/systemd.@*** // Busca systemd con algo adelante por ejemplo  ***:, /***   
+***/[aA].@[lL]*** // Busca un término que coincida con este, empieza con aA, le sigue cualquier cosa, y termina con lL  
+***:1,$s/Palabra/Leandro/g*** // Desde la primera línea, hasta la última, que me haga una busqueda de todo lo que coincida con ***Palabra***, por ***Leandro***, se realiza una sustitución masiva.    
 *** *** //    
 *** *** //    
 
@@ -267,5 +267,29 @@ Hay tres modos, comando, inserción, y en modo línea de comandos.
 * ***man rm*** // Manual del comando rm, al presionar ***h*** indica mas ayuda, escribiendo ***/change***, nos busca palabras que coincidan en la descripción del comando.
 * ***ls -l*** // Lista los archivos y muestra los permisos de cada uno
 * ***ls -li*** // i de inodo
-* *** *** //
-* *** *** //
+
+## Comando Tar y Unzip
+Tar permite crear backups de forma controlada y automatizada. Los tipos de compresión mas utilizados son ***gzip, bzip2, xz***.
+Mayor compresión, mayor tiempo y desgaste del procesador y disco duro.
+
+* ***tar -x*** // Para extraer
+* ***tar -c*** // Para crear
+* ***du -hsc * //*** Muestra el tamaño de los archivos    
+* ***tar -cf carpeta.tar carpeta/*** // Create File carpeta.tar de la carpeta ***carpeta/***  
+* ***tar -czf archivo.tar.zip carpeta/*** // Utilizar gzip para comprimir  
+* ***tar -cJf archivo.tar.xz carpeta/*** // Utiliza xz para comprimir ***xz es el mayor factor de compresión***
+* ***tar -xzf comprimido.tar.zip*** // Descomprime el archivo con el factor de descompresión ***z***  
+* ***tar -tvf archivo.tar.zip***// Muestra el contenido del archivo comprimido, sin descomprimirlo, la ***v*** es de verbose    
+* ***tar -xvf archivo.tar.zip carpetaSalida/archivo.mp3*** // Descomprime un solo archivo indicado con el nombre dentro del zip  
+* *** *** //  
+* *** *** //  
+* *** *** //  
+* *** *** //  
+* *** *** //  
+* *** *** //  
+* *** *** //  
+* *** *** //  
+
+
+
+* *** *** //  
