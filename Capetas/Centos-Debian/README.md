@@ -254,6 +254,63 @@ Mayor compresión, mayor tiempo y desgaste del procesador y disco duro. Zip no e
 * ***tar -pc --backup=t -f Descargar.tar Descargas*** // Mantener los permisos y crear, ***pc***, va a hacer un backup con nombre de archivo  ***-f*** descargar.tar comprimiendo la carpeta Descargas/, esta manera matiene los permisos de los archivos, con ***=t*** crea un número de backup    
 * ***unzip archivo.zip*** // Descomprime un archivo.zip  
 
+# Paquetes de software
+Antes de proceder a la instalación de repositorios o de binarios, con ***yumy o rpm para centOS o RedHat, y dpkg, apt, aptitude, apt-get, para distribuciones basadas en Debian***, tenemos que aprender como realizar la instalación desde las fuentes. Para ello tenemos que descargar el paquete de la fuente de npm, para instalar software desde la fuente, en centOS es necesario tener la dependencia ***yum install make gcc*** o ***apt install make gcc***, para poder compilar en distribuciones basadas en Debian. 
+
+* ***wget ftp://ftp.bitwizard.nl/mtr/mtr-0.92.tar.gz***  // Para descargar la fuente de repositorios  
+
+Luego leer el archivo para ver los pasos ***nano README***, salir del archivo, y ejecutar ***./configure***  para  que se validen las dependencias. Luego hacer ***make***, si sale un error, entonces instalar ***yum install autoconf***, luego volver a compilar con ***make***, y despues instalar ***make install***, ahora ya esta instlado el comando, utilizar ***mtr 8.8.8***.
+
+## Rpm - yum - CentOS 
+
+El gestor de paketes, en distribuciones basadas en RedHat, se llama ***rpm***, y algunos de sus gestores de command line interface, es ***yum***, es un gestor de paqueteria para realizar la instalación de sus correspondientes librerias. yum como tal posee múltiples herramientas de trabajo, es un gestor de aplicaciones muy organizado, el cual permite buscar, listar, instalar, desinstalar, limpiar, etc, todo el software en nuestra distribución.
+
+Lo primero es comprobar si hay actualizaciones disponibles para nuestra distribución.
+
+* ***yum check-update*** // Muestra paquetes listos para actualizar
+* ***yum update*** // Actualiza todo el sistema
+Para validar cuales paquetes estan listos para actualizar, 
+* ***yum update nombrePaquete***  // Solo actualiza el paquete nombrado, y ninguno adicional   
+* ***yum info nombrePaquete***  // Muestra información, arquitectura, versión, tamaño, y más sobre el repositorio nombrado   
+* ***yum search nombreRepositorio***  // Busca todo lo relacionado al repositorio
+* ***shitf+repag***  // Subir y bajar en la terminal para leer   
+* ***yum search php | less***  // Procede a buscar de forma páginada la información, y detalla paquete por paquete    
+* ***yum search php | grep mysql***  //  Todos los paquetes que tengan mysql dentro de su contenido
+* ***yum list | less***  // Todos los paquetes disponibles para mi sistema   
+* ***yum reinstall nombrePaquete***  // Reinstala un paquete, sirve por si tengo un paquete dañado, reconstruye la instalación
+* ***yum remove nombrePaquete -y*** //  Borra el paquete nombrado, y acepta todos los mensajes  
+* ***yum check***  // Valida los repositorios en línea, y los compara con los que estan en el cache del sistema   
+* ***yum clean all***  // Eliminar caché y archivos innecesarios que ocupan lugar en el sistema   
+* ***yum list install***  // Listado de paquetes para instalar en el sistema   
+* ***yum list installed***  // Todos los repositorios instalados en el sistema   
+* ***yum repo list***  // Muestra que repositorios estan instalados   
+* ***yum repoinfo nombreRepositorio***  // Muestra información sobre el repositorio nombrado   
+* ***yum provides /etc/ssh/sshd_config***  // Para saber a que paquetes le pertenece ese archivo de configuración     
+* ***yum group***  // Los grupos son metapaquetes que cuando yo le indico que me lo instale, instala el paquete completo con sus dependencias   
+* ***yum groups list***  //  Lista de grupos de repositorios disponibles para realizar una instalación
+* ***yum group install "Web Server"***  // Me instala todos los paquetes del grupo "Web Server"   
+* ***yum history***  // Las actividades que se han realizado   
+* ***yum history info 3***  // Muestra el historial con mas información sobre los procedimientos realizados   
+* ***yum install --downloadonly nombrePaquete***  // Solo descargará sin instalar  el paquete en la ruta cd /var/cache/yum/x86_64/7/epel(repositorio donde se descargo)/packages/archivo.rpm
+* ***yum localinstall nombrePaquete***  // Instala el paquete que esta dentro de la carpeta ya descargado
+
+
+* *** ***  //   
+* *** ***  //   
+* *** ***  //   
+* *** ***  //   
+* *** ***  //   
+
+setup.noarch
+
+
+
+* *** ***  //   
+* *** ***  //   
+* *** ***  //   
+* *** ***  //   
+* *** ***  //   
+
 ## Mis notas sobre comandos:
 
 * ***uname -r***  // Que verison del Kernel tengo instalada 
