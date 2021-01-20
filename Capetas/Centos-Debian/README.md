@@ -261,7 +261,7 @@ Antes de proceder a la instalación de repositorios o de binarios, con ***yumy o
 
 Luego leer el archivo para ver los pasos ***nano README***, salir del archivo, y ejecutar ***./configure***  para  que se validen las dependencias. Luego hacer ***make***, si sale un error, entonces instalar ***yum install autoconf***, luego volver a compilar con ***make***, y despues instalar ***make install***, ahora ya esta instlado el comando, utilizar ***mtr 8.8.8***.
 
-## Rpm - yum - CentOS 
+## Yum 
 
 El gestor de paketes, en distribuciones basadas en RedHat, se llama ***rpm***, y algunos de sus gestores de command line interface, es ***yum***, es un gestor de paqueteria para realizar la instalación de sus correspondientes librerias. yum como tal posee múltiples herramientas de trabajo, es un gestor de aplicaciones muy organizado, el cual permite buscar, listar, instalar, desinstalar, limpiar, etc, todo el software en nuestra distribución.
 
@@ -295,8 +295,41 @@ Para validar cuales paquetes estan listos para actualizar,
 * ***yum localinstall nombrePaquete***  // Instala el paquete que esta dentro de la carpeta ya descargado
 
 
+## Rpm
+
+Me permite ejecutar paquetes que ya hallan sido descargados:
+
+* ***yum install --downloadonly sl***  // Descarga sin instalar ***sl***   
+* ***rpm -ivh \ @.rpm***  // Me instala todos los paquetes -rpm v de verbose, i de install, h de que me instale de la forma de yum  
+* ***rpm -info paquete***  // Obtener información del paquete  
+* ***rpm -q -info paquete.rpm***  // Obtener información sobre si el paquete esta instalado   
+* ***rpm -qa | grep sl***  // Buscar los paquetes instalados con ***sl***   
+* ***rpm -Uvh nombrepPaquete.rpm***  // Actualiza un paquete   
+* ***rpm -qf /etc/ssh/sshd_config***  //  Información sobre el paquete   ***sshd_config***, te indica a donde pertenece el paquete
+* ***rom -qi paquete.rpm***  // Información sobre el paquete   
+* ***rpm -i --test paquete.rpm***  // Testea el paquete para ver si hay algún error para instalarlo   
+
+
+
+## Dpkg (Distribuciones basadas en Debian)
+* ***apt update***  // Actualiza los repositorios, pero no se aplican las actualizaciones   
+* ***apt upgrade***  // Aplica las actualizaciones al sistema de paquetes no escenciales, como firmwares o kernels 
+* ***apt dist upgrade***  // Se aplican actualizaciones al kernel o sistemas escenciales del sistema   
+* ***apt search htop***  // Buscar un paquete  
+* ***apt-cache search htop***  // Buscar un paquete, con una salida mas agradable  
+* ***apt install htop***  // Instala el paquete htop, y la salida es mas agradable que apt-get   
+* ***apt autoremove***  //  Automaticamente desinstala todos los paquetes que se pueden eliminar sin problema  
+* ***apt remove --purge htop***  //  Elimina el paquete htop junto a todos sus archivos de configuración que ocupan espacio  
+* ***apt autoclean***  // Borra todos los paquetes de la cache para liberar espacio   
+* ***apt install htop  sl-***  // Instala htop y elimina sl   
+* ***apt remove htop sl+***  //  Borra htop e instala sl  
 * *** ***  //   
 * *** ***  //   
+* *** ***  //   
+
+
+
+
 * *** ***  //   
 * *** ***  //   
 * *** ***  //   
