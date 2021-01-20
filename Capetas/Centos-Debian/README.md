@@ -311,7 +311,7 @@ Me permite ejecutar paquetes que ya hallan sido descargados:
 
 
 
-## Dpkg (Distribuciones basadas en Debian)
+## apt (Distribuciones basadas en Debian)
 * ***apt update***  // Actualiza los repositorios, pero no se aplican las actualizaciones   
 * ***apt upgrade***  // Aplica las actualizaciones al sistema de paquetes no escenciales, como firmwares o kernels 
 * ***apt dist upgrade***  // Se aplican actualizaciones al kernel o sistemas escenciales del sistema   
@@ -323,6 +323,31 @@ Me permite ejecutar paquetes que ya hallan sido descargados:
 * ***apt autoclean***  // Borra todos los paquetes de la cache para liberar espacio   
 * ***apt install htop  sl-***  // Instala htop y elimina sl   
 * ***apt remove htop sl+***  //  Borra htop e instala sl  
+* ***apt list installed***  // Paquetes instalados en el sistema   
+* ***apt lista installed | wc***  // Cantidad de paquetes instalados en el sistema, cuenta,las palabras o las líneas   
+* ***apt list | wc***  // Cuantos paquetes hay disponibles para instalar en el sistema
+
+## dpkg
+Dpkg es el backend de apt, es lo que seria el rpm en CentOS.
+Se necesita tener los binarios para proceder a la instalación.
+
+* **dpkg -i *.deb***  // Me instala todo lo que sea .deb   
+* ***dpkg -r nombrePaquete***  // Desinstala el paquete  
+* ***dpkg --unpack *.deb***  // Instalar todos los paquetes   
+* ***dpkg --configure htop***  // Configura todos luego de descomprimirlos e instalarlos   
+* ***dpkg -r htop sl***  // Desinstala el paquete ***sl***   
+* ***dpkg -I nombrePaquete.deb***  // Me da información sobre el paquete, nombre, tamaño, arquitectura, prioridad, descripción, etc, antes de ser instalado para saber de donde viene.   
+* ***dpkg-query --list***  // Muestra los paquetes insalados y disponibles en el sistema ii significa que esta instalado en el sistema    
+* ***dpkg -s apache2***  //  Para saber si el paquete esta instalado
+* ***cat /var/log/dpkg.log***  // Log de eventos de dpkg   
+* ***apt install alien***  // Instala alien para convertir un paquete a .rpm  
+* ***alien --to-rpm nombrePaquete.deb***  // convierte el paquete de .deb a .rpm, esto nos permite instalar el paquete en una distribución CentOS. ***No*** se recomienda para paquetes escenciales del sistema.   
+* ***rm @.deb***  // Elimina todos los archivos .deb  
+* ***alien --to-deb paquete.rpm***  // Convierte de .rpm a .deb para instalarlo en Debian     
+* ***cat /var/log/dpkg-log***  //  Archivo de log de dpkg  
+* ***nano /etc/apt/sources.list***  // Lista de repositorios en cualquier distribución basada en Debian   
+* [simplylinux](https://debgen.simplylinux.ch/) // Web para encontrar repositorios en Debian, generar y copiar ***Sources List*** en el archivo sources.list  para que se descargen los repositorios  
+* *** ***  //   
 * *** ***  //   
 * *** ***  //   
 * *** ***  //   
@@ -330,8 +355,15 @@ Me permite ejecutar paquetes que ya hallan sido descargados:
 
 
 
+
 * *** ***  //   
 * *** ***  //   
+
+
+
+
+
+
 * *** ***  //   
 
 setup.noarch
