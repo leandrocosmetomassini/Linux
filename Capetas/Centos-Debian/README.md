@@ -295,7 +295,7 @@ Para validar cuales paquetes estan listos para actualizar,
 * ***yum localinstall nombrePaquete***  // Instala el paquete que esta dentro de la carpeta ya descargado
 
 
-## Rpm
+## rpm
 
 Me permite ejecutar paquetes que ya hallan sido descargados:
 
@@ -348,7 +348,7 @@ Se necesita tener los binarios para proceder a la instalación.
 * ***nano /etc/apt/sources.list***  // Lista de repositorios en cualquier distribución basada en Debian   
 * [simplylinux](https://debgen.simplylinux.ch/) // Web para encontrar repositorios en Debian, generar y copiar ***Sources List*** en el archivo sources.list  para que se descargen todos los repositorios  
 
-## SNAP Y FLATPACK 
+## Snap y Flatpack 
 Son una ayuda, un completento al gestor de paqueterias de las distribuciones.  
 
 * [Snapcraft](https://snapcraft.io/)  // Tienda de aplicaciones para Linux  
@@ -379,10 +379,16 @@ Ruta relativa es indiciar la ubicación partiendo desde la ubicación actual. Ru
 * ***ls -lSrihR***  // Muestra el conenido de las carpetas 
 
 # Permisos: En Linux todo es un archivo
-* *** ***  //   
-* *** ***  //   
-* *** ***  //   
-* *** ***  //   
+* ***-***  // No tiene permisos  
+* ***r***  // Permisos de lectura  
+* ***w***  // Permisos de escritura  
+* ***x***  // Permisos de ejecución  
+* ***usuario propietario | grupo propietario | otros***     
+
+### Archivos
+* ***r***  // Abrirlo, copiarlo, Moverlo     
+* ***w***  // Modificar, guardar  
+* ***x***  // Ejecutar el archivo o script  
 
 
 
