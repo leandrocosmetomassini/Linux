@@ -346,7 +346,39 @@ Se necesita tener los binarios para proceder a la instalación.
 * ***alien --to-deb paquete.rpm***  // Convierte de .rpm a .deb para instalarlo en Debian     
 * ***cat /var/log/dpkg-log***  //  Archivo de log de dpkg  
 * ***nano /etc/apt/sources.list***  // Lista de repositorios en cualquier distribución basada en Debian   
-* [simplylinux](https://debgen.simplylinux.ch/) // Web para encontrar repositorios en Debian, generar y copiar ***Sources List*** en el archivo sources.list  para que se descargen los repositorios  
+* [simplylinux](https://debgen.simplylinux.ch/) // Web para encontrar repositorios en Debian, generar y copiar ***Sources List*** en el archivo sources.list  para que se descargen todos los repositorios  
+
+## SNAP Y FLATPACK 
+Son una ayuda, un completento al gestor de paqueterias de las distribuciones.  
+
+* [Snapcraft](https://snapcraft.io/)  // Tienda de aplicaciones para Linux  
+* [Flathub](https://flathub.org/home)  //  Cientos de aplicaciones que se pueden instalar fácilmente en cualquier distribución de Linux   
+
+## Archivos
+* ***file archivoNombre***  // Indica de que tipo es el archivo   
+* ***type ls***  // Me brinda información del comando ***ls***   
+* ***cd***  //  Change directory, me redirecciona al home del usuario  
+* ******  //   
+* ***cd ..***  // Ir al directorio superior  
+Ruta relativa es indiciar la ubicación partiendo desde la ubicación actual. Ruta absoluta es indicar desde la raiz hasta el archivo.
+* ***ls***  // Lista el contenido del directorio, no muestra archivos ocultos  
+* ***ls -a***  // Lista el contenido del directorio con sus archivos ocultos   
+* ***ls -a /etc/ssh/***  // Muestra el contenido de la carpeta con sus archivos ocultos, desde la ruta absoluta  
+* ***cd TAB TAB***  // Lista el contenido de la carpeta  
+* ***ls -l***  // Muestra el contenido de la carpeta con un listado extendido con mas información sobre el tipo, permisos, propietario, y última fecha de modiciación.  
+* ***ls -la***  // Lista con los archivos ocultos   
+***d***  // Directorio  
+***-***  // Archivo convencional 
+***b***  // Archivo de tipo bloque 
+***c***  // Dispositivo de tipo carácter que recibe y envía información, por ejemplo un mouse 
+* ***ls -lh***  // Muestra el tamaño del archivo con Mb, ***no*** muestra el peso total de una carpeta.  
+* ***ls -ls***  // Organiza por tamaño de archivos    
+* ***ls -lSr***  // Organiza por tamaño de archivos en reversa   
+* ***ls -lSri***  // Muestra el identifcador único de ese archivo  
+* ***ls -lSriha***    
+* ***ls -lSrihR***  // Muestra el conenido de las carpetas 
+
+# Permisos: En Linux todo es un archivo
 * *** ***  //   
 * *** ***  //   
 * *** ***  //   
