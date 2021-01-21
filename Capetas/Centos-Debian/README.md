@@ -375,7 +375,7 @@ Ruta relativa es indiciar la ubicación partiendo desde la ubicación actual. Ru
 * ***ls -ls***  // Organiza por tamaño de archivos    
 * ***ls -lSr***  // Organiza por tamaño de archivos en reversa   
 * ***ls -lSri***  // Muestra el identifcador único de ese archivo  
-* ***ls -lSriha***    
+* ***ls -lSriha***    // Muestra el conenido de las carpetas y archivos ocultos
 * ***ls -lSrihR***  // Muestra el conenido de las carpetas 
 
 # Permisos: En Linux todo es un archivo
@@ -390,18 +390,56 @@ Ruta relativa es indiciar la ubicación partiendo desde la ubicación actual. Ru
 * ***w***  // Modificar, guardar  
 * ***x***  // Ejecutar el archivo o script  
 
+### Directorios
+* ***r***  // Listar contenido del directorio   
+* ***w***  // Mover, copiar, eliminar, renombrar el contenido del directorio   
+* ***x***  // Acceder al contenido del directorio  
+* ***chmod 000 pruebas***  // Le quita todos los permisos al directorio pruebas   
+* ***chown usuario:usuario @***  // Le paso los permisos al ***usuario*** de todos los archivos   
+* ***chmod u+x Pruebas/***  // El usuario propietario tendra permiso de ejecución del direcotorio pruebas     
+* ***chmod u+r Pruebas/***  // Le doy permiso de lectura al propietario   
+* ***chmod u+w Pruebas/***  // Le doy permiso de escritura al archivo
+
+### Permisos abosolutos
+* ***0***  // No tiene permisos   
+* ***1***  // Ejecución  
+* ***2***  // Escritura  
+* ***3***  // Escritura y ejecución  
+* ***4***  // Lectura  
+* ***5***  // Lectura y ejecución  
+* ***6***  // Lectura y escritura  
+* ***7***  // Lectura, escritura, y ejecución  
+
+### Permisos relativos
+* ***u***  // Usuario propietario  
+* ***g***  // Grupo propietario  
+* ***o***  // Otros  
+* ***a***  // Todos
+
+* ***chmod 700 -R carpeta***  // Le da todos los permisos a todos los archivos de la carpeta 
+* ***chmod u+rwx,g+r-x,o+r -R Pruebas/***  // Agrego permisos a todo el direcotiro pruebas  
+* ***chown root -R Carpeta/***  // Cambia a root como propietario de la carpeta y todo su contenido   
+* *** ***  //   
+* *** ***  //   
+* *** ***  //   
+
+
+
+
+
+
+
 
 
 
 
 * *** ***  //   
 * *** ***  //   
-
-
-
-
-
-
+* *** ***  //   
+* *** ***  //   
+* *** ***  //   
+* *** ***  //   
+* *** ***  //   
 * *** ***  //   
 
 setup.noarch
