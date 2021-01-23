@@ -419,9 +419,87 @@ Ruta relativa es indiciar la ubicación partiendo desde la ubicación actual. Ru
 * ***chmod 700 -R carpeta***  // Le da todos los permisos a todos los archivos de la carpeta 
 * ***chmod u+rwx,g+r-x,o+r -R Pruebas/***  // Agrego permisos a todo el direcotiro pruebas  
 * ***chown root -R Carpeta/***  // Cambia a root como propietario de la carpeta y todo su contenido   
-* *** ***  //   
-* *** ***  //   
-* *** ***  //   
+* ***chown root:root -R Carpeta/***  // Cambia el usuario propietario y el grupo a root   
+* ***umask 777***  // Ahora todos los archivos se crearan con esos permisos, seran los permisos predeterminados     
+* ***groupadd sysadmin***  // Crea un nuevo grupo llamado syadmin   
+* ***usermod usurio -G grupo***  // Agrego al usuario al grupo   
+* ***groups usuario***  // Indica a que grupo pertence un usuario   
+* ***chgrp grupo -R Carpeta/***  // Indica que el grupo sera propietario de la carpeta compartida   
+* ******  // Todo dentro de la carpeta el usuario propietario sera el grupo   
+* ***chmod 770 Carpeta/***  // Solo los usuarios y el grupo tendran permiso   
+* ***chmod g+s Capeta/***  //  Todo lo que se cree dentro sera propierario el mismo grupo 
+* ***chmod +t -R Carpeta/***  // Solamente el usuario o grupo propietario pueden borrar, agrega una T al final   
+* ***chmod u+s archivo***  // Agrega una ***s*** en la parte de ejecución, siginifica que un usuario ejecutará como otro 
+
+## Softlink  y hardlink
+
+* ***ln -sT /home/usuario/carepta '/media/usuario/FHFS/AccesoDirectoCarpeta'***  // Crea un acceso directo a la carpeta en el USB, ***s*** de softlink.  
+* ***ln -T /home/usuario/carepta '/media/usuario/FHFS/AccesoDirectoCarpeta'***  //  ***Hardlink***, se crea un nuevo inodo, distino al original, se crea un nuevo archivo. Si borro el archivo original el hardlink si gue funcionando, es una copia exacta.
+
+## Más comandos para utilizar archivos
+
+* ***touch a b c d e f g***  // Crea archivos vacios   
+* ***mkdir carpeta***  // Crea una carpeta llamada carpeta 
+* ***mkdir Dir/Dir1/Dir2/Dir3/Dir4***  // Crea una estructura de directorios   
+* ***ls -R Dir/***  // Lista la estructura del directorio Dir   
+* ***rmdir Dir/***  //  Elimina un directorio vacio completo  
+* ***rm -r Dir***  // Elimina directorio (***Nunca*** utilizar como ***root*** ni tampoco rm -rf /*) ***Peligro de borrar todo el sistema***  
+* ***mv a ../carpeta***  // Mueve a dentro de la carpeta   
+* ***cp a b***  // Copia a en un archivo llamado b   
+* ***stat archivo***  // Muestra toda la información metadata del archivo   
+* ***cp -R directorioBackup***  // Copia el directorio pero cambia la información metadata, crea una nueva  
+* ***cp -Rp backup carpeta***  // Siempre utilizar ***p*** para realizar un backup de un archivo, para hacer un backup exacto de ese archivo con su información metadata  
+* ***tac /var/log/syslog***  // Invierte el archivo y lo muestra   
+* ***less /var/syslog***  // Muestra el archivo de forma páginada sirve para ver archivos grandes   
+* ***head -50 archivo***  // Muestra las primeras 50 líneas de un archivo   
+* ***tail archivo***  // Muestra las últimas líneas del archivo  
+* ***tail -20 archivo***  // Últimas líneas del archivo  
+* ***tail -f archivo***  //  Cada vez que se genere una línea en un archivo se va a mostrar en tiempo real  
+* ***tail -f /var/log/auto.log***  // Muestra logueos en tiempo real  
+* ***wc archivo***  // Me dice cuantas lineas tiene un archivo   
+# Usuarios y grupos
+* ***nano /etc/passwd***  //  Usuario registrados en el sistema, los que importan son id de mil para arriba 
+* ***root:x:0:0:root:/root:/bin/bash***  // usuario:¿Tiene password?:identificadorDelUsuario:identificadorGrupoDelUsuario:NombreCompleto:HomeDelUsuario:ShellAsociadaAlUsuario  NoLogin significa que el usuario no puede conectarse al sistema 
+* ***nano /etc/shadow***  // En este archivo se guardan las contraseñas   
+* ***man 5 shadow***  // Manual de archivo shadow   
+* ***root:fdsf92432/***  //  usuario:password:ultimaModificacionDeLaClavedesde1970:CuantosDiasPuedenPasarDesdeCrearLaClave: Cada colúmna esta explicada en el Man 
+* ***ls /etc/skel/***  //  Estan todos los archvivos que se copian al crear un nuevo usuario, parte de su configuración de perfil, que pasa cuando se conecta a una shell, etc 
+* ***nano /etc/group***  // Archivo donde se crean los grupos, el que tiene identificador de mil es el principal 
+## Root
+Es un usuario que lo puede hacer todo, dentro del sistema linux.
+
+* ***adduser usuario***  // Crea un nuevo usuario  
+* ***userdel -rf usuario***  // Borra un usuario y todo su contenido 
+* ***pwgen -sny 13 1***  // Crear contraseña segura que utilize números y símbolos con 13 carácteres y 1 espacio   
+* ***passwd usuario***  // Cambia la contraseña del usuario   
+* ***useradd -g 1000 -G lp -m -d /home/usuario -s /bin/sh -c "Usuario nombre ya pellido"***  // usuario con numero de grupo 1000, va a pertenecer a un grupo llamado lp, si no existe el directorio hombre que me lo cree, y la shell va a ser sh, el comentario es "..."   
+* ***cat /etc/passwd***  // Muestra que el usuario fue creado   
+* ***cat /etc/shadow***  // Muestra ! porque no se creo la contraseña para el usuario   
+* ***passwd -S usuario***  // Para saber las características de la contraseña de un usuario   
+* ***passwd -l usuario***  //  Para bloquear la contraseña a un usuario para que no pueda cambiarla, aparecera con !! este símbolo 
+* ***passwd -u usuario***  // Para desbloquear la cotnraseña de un usuario y que pueda cambiarla   
+* ***passwd -d usuario***  // Le quita la contraseña al usuario   
+* ***passwd -n 45 usuario***  // La contraseña tendra un máximo de 45 días   
+* ***passwd -x 90 usuario***  // Para darle un plazo de 90 días para cambiarla  
+* ***passwd -S usuario***  // Informa cuantos días tengo luego de que se venciera el plazo para cambiar la calbe   
+* ***change usuario***  //  Para cambiar de forma interactiva la contraseña
+* ***change -l usuario***  // Me da información de la contraseña del usuario   
+* ***usermod usuario -g 0 -c "Usuario del grupo administrador" -s /bin/bash***  // Le cambio al grupo 0(root), le cambio el comentario, y le cambio la shell  
+* ***usermod usuario -l apodo***  // Le cambia el login por apodo   
+* ***groupadd nombreGrupo -g 1100***  // Crea un grupo con grupo id 1100   
+* ***cat /etc/group***  // Para ver los grupos   
+* ***usermod usuario -g nombreGrupo***  // Cambia el grupo del usuario   
+* ***groupmod nombreGrupo -n otroNombre***  // Cambia el nombre a un grupo   
+* ******  // 
+* ******  // 
+* ******  // 
+* ******  // 
+* ******  // 
+* ******  // 
+* ******  // 
+* ******  //   
+* ******  //   
+* ******  //   
 
 
 
