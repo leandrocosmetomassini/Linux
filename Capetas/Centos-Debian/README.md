@@ -490,28 +490,56 @@ Es un usuario que lo puede hacer todo, dentro del sistema linux.
 * ***cat /etc/group***  // Para ver los grupos   
 * ***usermod usuario -g nombreGrupo***  // Cambia el grupo del usuario   
 * ***groupmod nombreGrupo -n otroNombre***  // Cambia el nombre a un grupo   
-* ******  // 
-* ******  // 
-* ******  // 
-* ******  // 
-* ******  // 
-* ******  // 
-* ******  // 
-* ******  //   
-* ******  //   
-* ******  //   
+* ***groupmod -n grupo -g 2000 otroNombre***  // Cambia el nombre y el id del grupo por 2000
+* ***groups usuario***  // Para ver a que grupos pertenece el usaurio
+* ***usermod -G grupo usuario***  //  Para que el usuario pertenezca al grupo
+* ***usermod -G grupo1,grupo2  usuario***  //  Agregar a un usuario a varios grupos
+* ***passwd***  // Para cambiar mi clave
+* ***chsh usaurio -s /bin/sh***  // Para cambiar la shell por sh
+* ***chsn usuario -s /bin/bash***  // Para cambiar la shell por bash
+* ***chfn -f "nombre Completo" -p telefono usuario***  // Cambia los datos del usuario   
 
+Existen dos archivos que permiten realizar las consultas de los usuarios  para conectarse y más estructuras de consultas.
 
-
-
-
-
-
-
-
-
-
+* ***nano /etc/nsswitch.conf*** // Ver archivo nsswitch    
+* ***nano /etc/login.def***  // Archivo que permite cambiar los parametros de creación de usuarios, se complementa con otros archivos.     
+## Su
+* ***su***  // Identificarse como root   
+* ***su usuario***  //  Identificarse como usuario  
+* ***su -l root -c 'fdisk -l'***  // Loguea como root y ejectura el comando   
+## Sudo: 
+me permite mayor configuración, pero me permite que un usuario convencional pueda desarrollar tareas administrativas, esto es una falla de seguridad.  
+* ***sudo***  // Pide la contraseña por defecto del usuario con el que estoy conectado     
+* ***apt install sudo***  // Se instalan las herramientas sudo   
+* ***sudo fdiks -l***  // Me pide la clave del usuario que estoy conectado y ejecuta fdiks
+* ***usermod soporte -G sudo***  // Agrego a soporte al grupo sudo   
+***%sudo ALL=(ALL:ALL) ALL***  Siginifca que cualquier usuario que del grupo sudo puede ejecutar desde cualquier maquina o estación de trabajo, puede ejecutarlo como cualquier usuario, cualquier grupo, cualquier comando.  
+Una persona que pertenezca al grupo sudo puede dañar notablemente nuestro sistema. Conviene comentar esta línea.  
+Agregar ***Defaults logfile="/var/log/sudo.log"***, para que cualquier usuario que realize una acción sobre sudo va a ser registrado  
+* ***cat /var/log/sudo.log***  // Registro de todas las acciones realizadas sobre sudo por los usuarios   
 * *** ***  //   
+* *** ***  //   
+* *** ***  //   
+* *** ***  //   
+* *** ***  //   
+* *** ***  //   
+* *** ***  //   
+* *** ***  //   
+* *** ***  //   
+* *** ***  //   
+* *** ***  //   
+  
+
+
+
+
+
+
+
+
+
+
+
 * *** ***  //   
 * *** ***  //   
 * *** ***  //   
