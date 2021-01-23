@@ -515,10 +515,11 @@ me permite mayor configuración, pero me permite que un usuario convencional pue
 * ***usermod soporte -G sudo***  // Agrego a soporte al grupo sudo   
 ***%sudo ALL=(ALL:ALL) ALL***  Siginifca que cualquier usuario que del grupo sudo puede ejecutar desde cualquier maquina o estación de trabajo, puede ejecutarlo como cualquier usuario, cualquier grupo, cualquier comando.  
 Una persona que pertenezca al grupo sudo puede dañar notablemente nuestro sistema. Conviene comentar esta línea.  
-Agregar ***Defaults logfile="/var/log/sudo.log"***, para que cualquier usuario que realize una acción sobre sudo va a ser registrado  
+Agregar ***Defaults logfile="/var/log/sudo.log", log_host, log_year, log_input, log_output***, para que cualquier usuario que realize una acción sobre sudo va a ser registrado  
 * ***cat /var/log/sudo.log***  // Registro de todas las acciones realizadas sobre sudo por los usuarios   
-* *** ***  //   
-* *** ***  //   
+* ***cd /var/log/sudo-io/0@***  // Registro de comandos ejecutados  
+* ***cat ttyout***  // Ver que le mostro al usuario por pantalla en la sección anterior    
+***Defaults mail_badpass, timestamp_timeout=0, insults (o badpass_message="Estas ingresando mal la contraseña"), passwd_tries=5*** al agregar esta línea, por defecto sudo deja 15 minutos la sesión abierta de sudo, con esta línea cada vez que ejecute sudo le pedirá la clave, luego si el usuario ingresa mal la clave aparecerín insultos, luego le doy hasta 5 intentos de ingresar correctametne la clave. 
 * *** ***  //   
 * *** ***  //   
 * *** ***  //   
