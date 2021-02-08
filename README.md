@@ -5,7 +5,7 @@
 * [Kernel](https://www.kernel.org/)
 * [Gnu](http://www.gnu.org/)
 * [Distrowatch](http://distrowatch.com)
-* []()
+* [Linuxize](https://linuxize.com/post/how-to-install-visual-studio-code-on-centos-7/)
 * []()
 * []()
 
